@@ -1,0 +1,22 @@
+challenge_id = "share-me"
+
+challenge_name = "Share Me"
+
+challenge_description = '''
+One of our workstations got hit by some malware. Here is the sample we managed to recover.
+'''
+
+challenge_spoilers = '''
+The binary is a packed targeted binary which uses the first 5 characters of the user's username to derive a key.
+The key is derived by hashing the input with a slightly modified version of SHA256 with different constants.
+The constants are derived at runtime to make analysis harder.
+If the correct username is used, it will use the derived key to decrypt the inner payload with RC4.
+The inner payload is a very simple flag checker. 
+'''
+
+author = "ZetaTwo"
+
+hints = [
+    "5 byte bruteforce is intended",
+    "Double check the SHA256 constants"
+]

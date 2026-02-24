@@ -1,0 +1,22 @@
+challenge_id = "minimizing-risk"
+
+challenge_name = "Minimizing Risk"
+
+challenge_description = '''
+TODO: create a description here for
+the challenge that is really cool
+and interesting
+'''
+
+challenge_spoilers = '''
+TODO: explain the challenge
+here for the commentators
+so that they can talk about it
+'''
+
+author = "TODO"
+
+hints = [
+    "RISC-V caching might break self modifying shellcode",
+    "You the binary contains syscalls - reduce, reuse, recycle!"
+]

@@ -1,0 +1,20 @@
+CC = gcc
+CFLAGS = -Wall -O0 -fno-stack-protector -march=x86-64 -mtune=generic -fno-asynchronous-unwind-tables
+CHALLENGE_LDFLAGS = -lcrypto
+
+# Debug build with flag printing and no anti-debugging
+CFLAGS += -DDEBUG_PRINT
+
+all: reverseme challenge
+
+reverseme: reverseme.c
+	$(CC) $(CFLAGS) -o reverseme reverseme.c
+	./post-build.sh reverseme
+
+challenge: challenge.c flag_hash.h
+	$(CC) $(CFLAGS) -o challenge challenge.c $(CHALLENGE_LDFLAGS)
+
+clean:
+	rm -f reverseme challenge
+
+.PHONY: all clean

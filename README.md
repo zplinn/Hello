@@ -1,1 +1,1 @@
-# Hello
+A small collection of ctf challenges.

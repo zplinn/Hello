@@ -1,0 +1,19 @@
+challenge_id = "obf-the-shelf"
+
+challenge_name = "Obf the Shelf"
+
+challenge_description = '''
+My crackme was a little bit too simple so I used this obfuscator I found.
+'''
+
+challenge_spoilers = '''
+The binary is a simple crackme which checks the input one character at a time but in a scrambled order.
+The binary has been compiled with the obfus.h obfuscator (https://github.com/DosX-dev/obfus.h).
+'''
+
+author = "ZetaTwo"
+
+hints = [
+    "The binary checks the flag one character at a time out of order",
+    "Instruction counting should work"
+]

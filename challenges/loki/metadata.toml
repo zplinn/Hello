@@ -1,0 +1,24 @@
+challenge_id = "loki"
+
+challenge_name = "Loki"
+
+challenge_description = '''
+A mysterious binary has appeared, but something seems... off. Extract the
+correct flag from "reverseme" and send it to the waiting listener to gain
+access. But beware - Loki is known for his tricks.
+'''
+
+challenge_spoilers = '''
+A reverse engineering challenge featuring a heavily obfuscated
+binary that uses anti-analysis techniques targeting popular
+tools like Ghidra, IDA, Binary Ninja, and angr. Players must
+extract a flag from the binary, which when sent to the network
+listener (after SHA256 validation) grants shell access.
+'''
+
+author = "psifertex"
+
+hints = [
+    "Every major RE tool has some breakage in this binary",
+    "Dynamic analysis or emulation is probably fastest if you can avoid detection"
+]
